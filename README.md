@@ -1,4 +1,4 @@
-# 🔐 Securing Smart Energy Systems (Inverters, Batteries & Solar)
+#  Securing Smart Energy Systems (Inverters, Batteries & Solar)
 
 ##  Project Overview
 Modern energy systems such as solar inverters, lithium battery storage, and hybrid power solutions are no longer isolated hardware systems. They are increasingly integrated with mobile applications, cloud-based platforms, and remote monitoring tools.
