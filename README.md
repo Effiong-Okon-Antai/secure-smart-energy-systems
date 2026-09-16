@@ -7,18 +7,9 @@ This project explores the cybersecurity risks associated with these connected en
 
 ---
 
-##  System Architecture (Simplified)
+##  System Architecture 
 
-User (Mobile App)
-        │
-        ▼
-Cloud Monitoring Platform
-        │
-        ▼
-Home/Business Network (WiFi Router)
-        │
-        ▼
-Inverter / Battery System (IoT Device)
+![Smart Energy System Architecture](architecture-diagram.png)
 
 ---
 
