@@ -359,7 +359,7 @@ Uncontrolled remote access can lead to full system compromise.
 
 ---
 
-### 🧠 8. User Awareness
+###  8. User Awareness
 
 - Educate users about basic cybersecurity practices  
 - Encourage secure configuration during installation  
@@ -367,6 +367,41 @@ Uncontrolled remote access can lead to full system compromise.
 
 **Why this matters:**  
 Human error is a major cause of security breaches.
+
+---
+
+##  Security Testing Approaches
+
+To support the identified threat scenarios, this project highlights controlled and ethical cybersecurity testing approaches that can be used to assess the security of smart energy systems.
+
+These approaches are commonly used in security assessments and research environments.
+
+###  Network Scanning
+- Tools such as Nmap can be used to identify exposed devices, open ports, and running services within a network.
+- This helps detect unintended exposure of inverter or monitoring systems.
+
+###  Device Discovery
+- Tools like Netdiscover can be used to map devices connected to a network, including routers, inverters, and monitoring platforms.
+- This improves visibility of the system environment.
+
+###  Authentication Testing
+- Controlled testing using tools such as Hydra or Hashcat can help evaluate password strength and identify weak authentication mechanisms.
+- This supports the enforcement of stronger access controls.
+
+###  Wireless Security Assessment
+- Tools such as Aircrack-ng can be used in controlled environments to assess WiFi security, especially where energy systems rely on wireless connectivity.
+
+---
+
+###  Ethical Consideration
+
+All testing approaches must be conducted in authorized and controlled environments. These techniques are intended for security assessment, research, and system hardening purposes only.
+
+---
+
+###  Relevance to This Project
+
+These approaches demonstrate how cybersecurity techniques can be applied to identify and mitigate vulnerabilities in IoT-enabled energy systems, improving overall system security and resilience.
 
 ---
 
