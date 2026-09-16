@@ -9,7 +9,7 @@ This project explores the cybersecurity risks associated with these connected en
 
 ##  System Architecture 
 
-[Smart Energy System Architecture](architecture-diagram.png)
+![Smart Energy System Architecture](smart energy system achitecture.png)
 
 ---
 
