@@ -2,12 +2,22 @@
 
 ## Overview
 
-The Smart Energy Cybersecurity Assessment Framework (SECAF) is an open-source framework designed to support the structured assessment of cybersecurity risks in connected smart energy systems.
+Smart energy systems are changing. Many modern inverters, battery systems and solar installations can now connect to Wi-Fi, mobile apps and cloud platforms for monitoring and remote access.
 
-Modern energy systems increasingly combine physical power equipment with digital technologies. Inverters, battery management systems, monitoring gateways and other energy devices may connect to Wi-Fi networks, mobile applications, cloud platforms and remote monitoring services.
+These features make energy systems easier to manage, but they can also introduce security risks. Weak passwords, poorly secured networks, outdated firmware and unrestricted remote access can expose connected systems to cyber threats.
 
-These connections provide useful monitoring and control capabilities, but they can also introduce cybersecurity risks if they are not properly secured.
+I developed the Smart Energy Cybersecurity Assessment Framework (SECAF) as a practical way to identify and assess some of these risks.
 
-SECAF provides a structured approach for identifying, assessing and documenting these risks. It is intended to help users examine key areas such as authentication, network security, remote access, firmware, cloud connectivity, data protection and security monitoring.
+The framework looks at important areas such as:
 
-The framework is designed primarily for educational, defensive and authorised cybersecurity assessment purposes.
+- User authentication and passwords
+- Network and Wi-Fi security
+- Remote access
+- Mobile and cloud connectivity
+- Firmware and system updates
+- Data protection
+- Security monitoring
+
+The aim is to provide a simple and structured way to review the cybersecurity of connected energy systems and document areas that may need improvement.
+
+SECAF is intended for defensive, educational and authorised security assessment only.
