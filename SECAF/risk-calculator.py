@@ -25,6 +25,7 @@ print("-----------------------------------")
 finding_id = input("Enter Finding ID (example F-01): ").strip()
 checklist_id = input("Enter Checklist Reference (example AC-01): ").strip()
 finding = input("Briefly describe the finding: ").strip()
+recommendation = input("Enter recommended action: ").strip()
 
 try:
     likelihood = int(input("Enter Likelihood (1-5): "))
@@ -45,6 +46,44 @@ try:
         print(f"Impact: {impact}")
         print(f"Risk Score: {score}")
         print(f"Risk Level: {level}")
+        print(f"Recommended Action: {recommendation}")
+
+        report = f"""# SECAF Assessment Finding
+
+## Finding Information
+
+**Finding ID:** {finding_id}
+
+**Checklist Reference:** {checklist_id}
+
+**Finding:**  
+{finding}
+
+## Risk Assessment
+
+**Likelihood:** {likelihood}/5
+
+**Impact:** {impact}/5
+
+**Risk Score:** {score}
+
+**Risk Level:** {level}
+
+## Recommended Action
+
+{recommendation}
+
+---
+
+Generated using the SECAF v1.0 Risk Calculator.
+"""
+
+        filename = f"{finding_id.lower()}-assessment.md"
+
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(report)
+
+        print(f"\nAssessment report saved as: {filename}")
 
 except ValueError:
     print("\nError: Please enter numbers between 1 and 5 for Likelihood and Impact.")
