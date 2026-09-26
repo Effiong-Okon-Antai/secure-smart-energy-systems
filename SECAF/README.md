@@ -86,3 +86,36 @@ The assessment can cover:
 - Security alerts and notifications
 - Changes to system configuration
 - Unusual activity that may require investigation
+
+---
+
+## Using SECAF
+
+SECAF is designed to be used as a simple step-by-step assessment process.
+
+### Step 1 — Review the Security Checklist
+Start with the [SECAF Cybersecurity Assessment Checklist](assessment-checklist.md).
+
+Work through each assessment area and record whether each security control is in place, missing, partially implemented or not applicable.
+
+### Step 2 — Record Identified Issues
+If a security issue is identified, record the finding and the available evidence or observation.
+
+Do not record passwords, private keys or other sensitive credentials.
+
+### Step 3 — Assess the Risk
+Use the [SECAF Risk Scoring Method](risk-scoring.md) to give the finding a likelihood and impact score.
+
+The two scores are multiplied to determine the overall risk score and risk level.
+
+### Step 4 — Document the Assessment
+Use the [SECAF Cybersecurity Assessment Template](assessment-template.md) to record the system being assessed, findings, risk scores and recommended actions.
+
+### Step 5 — Review Recommended Actions
+Use the findings to identify which security issues should be addressed first and record the actions taken.
+
+A completed assessment should provide a clear record of what was reviewed, what issues were identified and what improvements were recommended.
+
+### Example
+
+See the [SECAF Example Assessment](example-assessment.md) for a fictional example showing how the checklist, risk scoring and assessment template work together.
