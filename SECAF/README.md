@@ -93,6 +93,8 @@ The assessment can cover:
 
 SECAF is designed to be used as a simple step-by-step assessment process.
 
+SECAF follows a structured assessment methodology. Before using the checklist, review the [SECAF Assessment Methodology](methodology.md) to understand how the assessment should be carried out.
+
 ### Step 1 — Review the Security Checklist
 Start with the [SECAF Cybersecurity Assessment Checklist](assessment-checklist.md).
 
