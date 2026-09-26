@@ -27,3 +27,17 @@ Any issue identified during the assessment should be recorded for further review
 | AC-04 | Are administrator accounts limited to people who need them? |  |  |
 | AC-05 | Are unused or old user accounts removed or disabled? |  |  |
 | AC-06 | Are different users given appropriate levels of access? |  |  |
+
+---
+
+## 2. Network Security
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| NS-01 | Is the energy system connected to a secured Wi-Fi or wired network? |  |  |
+| NS-02 | Is WPA2 or WPA3 used where the system connects through Wi-Fi? |  |  |
+| NS-03 | Has the router's default administrator password been changed? |  |  |
+| NS-04 | Are energy and IoT devices separated from other important devices where possible? |  |  |
+| NS-05 | Are unnecessary network services and ports disabled or restricted? |  |  |
+| NS-06 | Is remote network access restricted to authorised users only? |  |  |
+| NS-07 | Are connected energy devices regularly reviewed to identify unknown or unexpected devices? |  |  |
