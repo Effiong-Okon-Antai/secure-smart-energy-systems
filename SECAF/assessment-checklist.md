@@ -58,3 +58,19 @@ Many connected energy systems allow users or installers to monitor and manage eq
 | RC-06 | Is communication with the cloud or remote platform encrypted, where this can be verified? |  |  |
 | RC-07 | Are account permissions reviewed to make sure users only have the access they need? |  |  |
 | RC-08 | Are security or login notifications enabled where the platform provides them? |  |  |
+
+---
+
+## 4. Firmware and Software Security
+
+Connected inverters, battery systems, gateways and monitoring devices may depend on firmware or software to operate and communicate. Keeping these components updated can help reduce known security risks.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| FS-01 | Is the current firmware or software version known and recorded? |  |  |
+| FS-02 | Is the equipment still supported by the manufacturer or supplier? |  |  |
+| FS-03 | Are firmware and software updates obtained from trusted or official sources? |  |  |
+| FS-04 | Are available security updates reviewed and applied when appropriate? |  |  |
+| FS-05 | Is there a process for checking whether important security updates are available? |  |  |
+| FS-06 | Are outdated or unsupported components identified for review or replacement? |  |  |
+| FS-07 | Are important system settings or configurations recorded before major updates where possible? |  |  |
