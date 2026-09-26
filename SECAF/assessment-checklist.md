@@ -127,3 +127,21 @@ Physical access should therefore be considered as part of the overall security a
 | PS-04 | Are unused physical communication ports or interfaces restricted where possible? |  |  |
 | PS-05 | Is there a process for controlling installer or maintenance access to the equipment? |  |  |
 | PS-06 | Are signs of unauthorised physical access or changes to equipment checked during maintenance? |  |  |
+
+---
+
+## 8. Backup, Recovery and Incident Response
+
+Security is not only about preventing problems. It is also important to know how the system can be recovered if an account is compromised, a configuration is changed incorrectly, a device fails or another security incident occurs.
+
+The available backup and recovery options will depend on the equipment and platform being assessed.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| BR-01 | Are important system settings or configurations backed up where supported? |  |  |
+| BR-02 | Is there a known process for restoring the system after a failure or incorrect configuration? |  |  |
+| BR-03 | Is there a process for responding if a user or administrator account is compromised? |  |  |
+| BR-04 | Can remote access be disabled or restricted quickly if a security problem is identified? |  |  |
+| BR-05 | Are important contact details for the installer, supplier or manufacturer available when technical support is required? |  |  |
+| BR-06 | Is there a process for recording and reviewing security incidents? |  |  |
+| BR-07 | After an incident, are passwords, access permissions and affected configurations reviewed where necessary? |  |  |
