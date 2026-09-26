@@ -110,3 +110,20 @@ The monitoring features available will depend on the inverter, battery system, m
 | ML-05 | Is there a process for reviewing important alerts or unusual activity? |  |  |
 | ML-06 | Are monitoring records protected from unauthorised access where possible? |  |  |
 | ML-07 | Is there a clear process for investigating unusual activity when it is detected? |  |  |
+
+---
+
+## 7. Physical Security and Local Access
+
+Cybersecurity is not limited to online access. Someone with physical access to an inverter, communication gateway, router or other connected equipment may also be able to access settings, network connections or system controls.
+
+Physical access should therefore be considered as part of the overall security assessment.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| PS-01 | Is important energy and communication equipment located in a reasonably secure area? |  |  |
+| PS-02 | Is physical access to configuration or communication interfaces limited to authorised people? |  |  |
+| PS-03 | Are routers, gateways and communication modules protected from unnecessary public access? |  |  |
+| PS-04 | Are unused physical communication ports or interfaces restricted where possible? |  |  |
+| PS-05 | Is there a process for controlling installer or maintenance access to the equipment? |  |  |
+| PS-06 | Are signs of unauthorised physical access or changes to equipment checked during maintenance? |  |  |
