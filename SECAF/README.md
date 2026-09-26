@@ -22,6 +22,19 @@ The aim is to provide a simple and structured way to review the cybersecurity of
 
 SECAF is intended for defensive, educational and authorised security assessment only.
 
+## Framework Components
+
+SECAF v1.0 currently includes:
+
+- [Assessment Methodology](methodology.md) — explains how a SECAF assessment is carried out.
+- [Assessment Checklist](assessment-checklist.md) — provides the security checks used during an assessment.
+- [Control Reference](control-reference.md) — provides reference IDs for the assessment areas and controls.
+- [Risk Scoring](risk-scoring.md) — explains how Likelihood and Impact are used to determine risk.
+- [Assessment Template](assessment-template.md) — provides a structure for recording an assessment.
+- [Example Assessment](example-assessment.md) — shows how a fictional assessment finding can be documented.
+- [Risk Calculator](risk-calculator.py) — Python tool for calculating risk scores and generating finding reports.
+- [Testing](TESTING.md) — documents the functional tests performed on the risk calculator.
+
 ## Purpose and Objectives
 
 I created SECAF to provide a practical way of looking at cybersecurity risks in connected energy systems.
