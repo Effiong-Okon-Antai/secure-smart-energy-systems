@@ -153,7 +153,7 @@ From the root of this repository, run:
 
 ```bash
 python SECAF/risk-calculator.py
----
+```
 
 ## Framework Status and Limitations
 
