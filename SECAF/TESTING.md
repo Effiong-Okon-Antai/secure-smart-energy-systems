@@ -18,11 +18,14 @@ with both Likelihood and Impact rated from 1 to 5.
 | T-02 | 4 | 4 | 16 | High | Passed |
 | T-03 | 3 | 3 | 9 | Medium | Passed |
 | T-04 | 2 | 2 | 4 | Low | Passed |
+| T-05 | 6 | 3 | Rejected | Invalid input | Passed |
 
-All four manual tests returned the expected risk score and classification.
+The four risk classification tests returned the expected results. An additional range-validation test confirmed that values outside the permitted 1–5 range are rejected.
 
 ## What Was Tested
 
+- reject Likelihood or Impact values outside the permitted 1–5 range.
+  
 The tests confirmed that the calculator can:
 
 - accept Likelihood and Impact values;
