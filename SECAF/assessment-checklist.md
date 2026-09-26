@@ -74,3 +74,21 @@ Connected inverters, battery systems, gateways and monitoring devices may depend
 | FS-05 | Is there a process for checking whether important security updates are available? |  |  |
 | FS-06 | Are outdated or unsupported components identified for review or replacement? |  |  |
 | FS-07 | Are important system settings or configurations recorded before major updates where possible? |  |  |
+
+---
+
+## 5. Data Protection and Privacy
+
+Connected energy systems can collect and transmit information about system performance, energy production, battery status, device information and user accounts. Some systems may also send this information to mobile apps or cloud platforms.
+
+It is important to understand what information is being collected, where it is stored and who can access it.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| DP-01 | Is it clear what system and user data is being collected? |  |  |
+| DP-02 | Is it known where the collected data is stored or processed? |  |  |
+| DP-03 | Is access to system and user data limited to authorised users? |  |  |
+| DP-04 | Is sensitive data protected when transmitted between devices, apps and cloud services, where this can be verified? |  |  |
+| DP-05 | Are users aware when system information is shared with a manufacturer, installer or cloud service? |  |  |
+| DP-06 | Are unnecessary data-sharing features disabled where possible? |  |  |
+| DP-07 | Is there a way to remove or revoke access when a user, installer or service provider no longer needs the data? |  |  |
