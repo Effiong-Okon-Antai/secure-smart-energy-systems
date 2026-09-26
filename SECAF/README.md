@@ -121,3 +121,24 @@ A completed assessment should provide a clear record of what was reviewed, what 
 ### Example
 
 See the [SECAF Example Assessment](example-assessment.md) for a fictional example showing how the checklist, risk scoring and assessment template work together.
+
+---
+
+## Framework Status and Limitations
+
+SECAF v1.0 is an independently developed, open-source cybersecurity assessment framework focused on connected smart energy systems.
+
+It is currently an early version of the framework and will continue to develop as more research, practical feedback and technical review are added.
+
+SECAF should not be presented as an industry standard or as a replacement for established cybersecurity standards and manufacturer security guidance.
+
+The framework also has some limitations:
+
+- It does not guarantee that a system is free from cybersecurity vulnerabilities.
+- The security features available will vary between manufacturers, devices and cloud platforms.
+- Some checks may not apply to every energy system.
+- Risk scores depend on the actual system, environment and evidence available during an assessment.
+- SECAF v1.0 has not yet been independently validated as an industry cybersecurity standard.
+- The framework is intended for defensive and authorised security assessment only.
+
+Future versions of SECAF may be improved through technical review, practical testing, community feedback and contributions from cybersecurity and energy professionals.
