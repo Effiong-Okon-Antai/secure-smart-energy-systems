@@ -92,3 +92,21 @@ It is important to understand what information is being collected, where it is s
 | DP-05 | Are users aware when system information is shared with a manufacturer, installer or cloud service? |  |  |
 | DP-06 | Are unnecessary data-sharing features disabled where possible? |  |  |
 | DP-07 | Is there a way to remove or revoke access when a user, installer or service provider no longer needs the data? |  |  |
+
+---
+
+## 6. Security Monitoring and Logging
+
+Security monitoring can help identify unusual access, unexpected configuration changes or other activity that may require investigation.
+
+The monitoring features available will depend on the inverter, battery system, mobile app or cloud platform being assessed.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| ML-01 | Does the system keep records of user logins or access, where supported? |  |  |
+| ML-02 | Can failed or unusual login attempts be identified? |  |  |
+| ML-03 | Are important configuration changes recorded, where supported? |  |  |
+| ML-04 | Are security or system alerts enabled where available? |  |  |
+| ML-05 | Is there a process for reviewing important alerts or unusual activity? |  |  |
+| ML-06 | Are monitoring records protected from unauthorised access where possible? |  |  |
+| ML-07 | Is there a clear process for investigating unusual activity when it is detected? |  |  |
