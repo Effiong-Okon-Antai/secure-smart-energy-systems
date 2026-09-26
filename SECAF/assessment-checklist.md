@@ -41,3 +41,20 @@ Any issue identified during the assessment should be recorded for further review
 | NS-05 | Are unnecessary network services and ports disabled or restricted? |  |  |
 | NS-06 | Is remote network access restricted to authorised users only? |  |  |
 | NS-07 | Are connected energy devices regularly reviewed to identify unknown or unexpected devices? |  |  |
+
+---
+
+## 3. Remote Access and Cloud Security
+
+Many connected energy systems allow users or installers to monitor and manage equipment through mobile apps, web portals or cloud platforms. These features are useful, but access should be properly controlled.
+
+| ID | Security Check | Result | Notes |
+|---|---|---|---|
+| RC-01 | Is remote access enabled only when it is needed? |  |  |
+| RC-02 | Is remote access limited to authorised users? |  |  |
+| RC-03 | Are strong, unique passwords used for cloud and remote-access accounts? |  |  |
+| RC-04 | Is multi-factor authentication enabled where the platform supports it? |  |  |
+| RC-05 | Are former installers, employees or other users removed when they no longer require access? |  |  |
+| RC-06 | Is communication with the cloud or remote platform encrypted, where this can be verified? |  |  |
+| RC-07 | Are account permissions reviewed to make sure users only have the access they need? |  |  |
+| RC-08 | Are security or login notifications enabled where the platform provides them? |  |  |
