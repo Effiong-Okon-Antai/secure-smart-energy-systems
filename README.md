@@ -1,5 +1,31 @@
 #  Securing Smart Energy Systems (Inverters, Batteries & Solar)
 
+
+[![SECAF Automated Tests](https://github.com/Effiong-Okon-Antai/secure-smart-energy-systems/actions/workflows/secaf-tests.yml/badge.svg)](https://github.com/Effiong-Okon-Antai/secure-smart-energy-systems/actions/workflows/secaf-tests.yml)
+
+### SECAF Automated Validation
+
+The Smart Energy Cybersecurity Assessment Framework (SECAF)
+includes automated Python tests executed through GitHub Actions.
+
+The test suite covers:
+
+- Risk calculation and classification
+- Input validation and risk scoring boundaries
+- Markdown assessment report generation
+- Report filename validation and overwrite protection
+- Verification of five hypothetical smart inverter security findings
+
+**Test suite:** 15 automated tests, subject to the latest workflow results.
+
+**Testing documentation:** [SECAF Testing](SECAF/TESTING.md)
+
+**Simulated assessment:** [Smart Inverter Cybersecurity Assessment](SECAF/simulated-smart-inverter-assessment.md)
+
+These tests verify implemented software behaviour and illustrative
+risk calculations. They do not constitute independent cybersecurity
+certification or testing of real smart-energy equipment.
+
 ##  Project Overview
 Modern energy systems such as solar inverters, lithium battery storage, and hybrid power solutions are no longer isolated hardware systems. They are increasingly integrated with mobile applications, cloud-based platforms, and remote monitoring tools.
 
