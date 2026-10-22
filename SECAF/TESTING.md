@@ -109,3 +109,72 @@ Further testing is required for interactive input handling, Markdown
 report generation, and application of the framework to realistic
 smart-energy cybersecurity assessment scenarios.
 
+
+---
+
+## SECAF v1.1 Extended Automated Validation
+
+**Validation date:** 22 October 2026
+
+The SECAF v1.1 Python risk calculator and assessment report
+generator were evaluated using automated unit and integration tests.
+
+### Test Summary
+
+| Test Category | Number of Tests | Result |
+|---|---:|---|
+| Risk calculation and classification | 8 | PASS |
+| Assessment report generation and safety | 4 | PASS |
+| **Total** | **12** | **PASS** |
+
+### Risk Calculator Validation
+
+The automated tests verify:
+
+- Low, Medium, High and Critical risk classifications
+- Risk score boundaries
+- Invalid numerical inputs
+- Unsupported input types
+- All 25 valid likelihood-impact combinations
+
+### Assessment Report Validation
+
+The automated tests verify:
+
+- Successful generation of a Markdown assessment report
+- Correct recording of assessment information and risk scores
+- Rejection of invalid likelihood values
+- Rejection of unsafe Finding IDs
+- Protection against overwriting existing assessment reports
+
+### Test Execution
+
+The tests run automatically using GitHub Actions.
+
+Command:
+
+    python -m unittest discover -s SECAF -p "test_*.py" -v
+
+Expected verified output:
+
+    Ran 12 tests
+
+    OK
+
+### GitHub Actions Evidence
+
+Automated test execution history:
+
+https://github.com/Effiong-Okon-Antai/secure-smart-energy-systems/actions/workflows/secaf-tests.yml
+
+### Validation Limitations
+
+The automated tests confirm the behaviour of the implemented
+risk calculation and report-generation functions.
+
+They do not independently validate the cybersecurity effectiveness
+of the SECAF methodology or establish that the framework has been
+deployed in a real smart-energy environment.
+
+Further validation will involve applying the framework to
+documented simulated smart-energy cybersecurity scenarios.
