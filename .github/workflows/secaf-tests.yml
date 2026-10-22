@@ -25,5 +25,50 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run SECAF risk calculator tests
+      - name: Run SECAF automated tests
         run: python -m unittest discover -s SECAF -p "test_*.py" -v
+
+      - name: Generate SECAF assessment report
+        run: python SECAF/generate-assessment-report.py
+
+      - name: Verify generated assessment report
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          report = Path("SECAF/generated-assessment-report.md")
+
+          if not report.is_file():
+              raise SystemExit("ERROR: Assessment report was not generated.")
+
+          content = report.read_text(encoding="utf-8")
+
+          required_sections = [
+              "# SECAF Automated Cybersecurity Assessment Report",
+              "## 1. Executive Summary",
+              "## 2. Risk Assessment Results",
+              "## 3. Risk Distribution",
+              "## 4. Detailed Findings",
+              "## 5. Highest-Priority Finding",
+              "## 6. Assessment Limitations",
+          ]
+
+          for section in required_sections:
+              if section not in content:
+                  raise SystemExit(f"ERROR: Missing section: {section}")
+
+          for finding_id in ["F-01", "F-02", "F-03", "F-04", "F-05"]:
+              if finding_id not in content:
+                  raise SystemExit(f"ERROR: Missing finding: {finding_id}")
+
+          print("Generated report verification PASSED.")
+          print("All required sections and finding IDs are present.")
+          PY
+
+      - name: Upload generated assessment report
+        uses: actions/upload-artifact@v4
+        with:
+          name: secaf-generated-assessment-report
+          path: SECAF/generated-assessment-report.md
+          if-no-files-found: error
+          retention-days: 30
