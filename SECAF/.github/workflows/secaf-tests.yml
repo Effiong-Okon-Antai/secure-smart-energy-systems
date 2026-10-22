@@ -1,0 +1,32 @@
+
+name: SECAF Automated Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run SECAF Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Display Python version
+        run: python --version
+
+      - name: Run SECAF risk calculator tests
+        run: python -m unittest discover -s SECAF -p "test_*.py" -v
