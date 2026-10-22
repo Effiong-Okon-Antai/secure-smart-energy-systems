@@ -1,16 +1,26 @@
 
-# SECAF v1.1 Simulated Assessment Verification
-# Smart Energy Cybersecurity Assessment Framework
+"""
+SECAF v1.1 — Automated Simulated Assessment Verification
+
+Reads findings from simulated-assessment.json and checks
+their risk scores using the SECAF risk calculator.
+
+All scenarios are hypothetical.
+"""
 
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
 
-CALCULATOR_PATH = (
-    Path(__file__).resolve().parent / "risk-calculator.py"
-)
+BASE_DIR = Path(__file__).resolve().parent
 
+CALCULATOR_PATH = BASE_DIR / "risk-calculator.py"
+ASSESSMENT_PATH = BASE_DIR / "simulated-assessment.json"
+
+
+# Import the existing SECAF risk calculator.
 spec = importlib.util.spec_from_file_location(
     "secaf_calculator",
     CALCULATOR_PATH
@@ -22,70 +32,114 @@ spec.loader.exec_module(calculator)
 calculate_risk = calculator.calculate_risk
 
 
-# Expected findings from the simulated assessment document.
-# These are hypothetical scenario ratings, not live measurements.
-SIMULATED_FINDINGS = [
-    ("F-01", "Weak authentication", 4, 4, 16, "High"),
-    ("F-02", "Insecure Wi-Fi configuration", 3, 4, 12, "High"),
-    ("F-03", "Outdated firmware", 3, 5, 15, "High"),
-    ("F-04", "Excessive permissions", 3, 3, 9, "Medium"),
-    ("F-05", "Inadequate network segmentation", 4, 5, 20, "Critical"),
-]
-
-
 class TestSimulatedAssessment(unittest.TestCase):
 
-    def test_all_simulated_findings(self):
-        for finding_id, name, likelihood, impact, score, level in SIMULATED_FINDINGS:
-            with self.subTest(finding=finding_id):
-                actual_score, actual_level = calculate_risk(
-                    likelihood,
-                    impact
+    @classmethod
+    def setUpClass(cls):
+        with ASSESSMENT_PATH.open(
+            "r",
+            encoding="utf-8"
+        ) as file:
+            cls.assessment = json.load(file)
+
+        cls.findings = cls.assessment["findings"]
+
+    def test_assessment_contains_five_findings(self):
+        self.assertEqual(len(self.findings), 5)
+
+    def test_unique_finding_ids(self):
+        finding_ids = [
+            finding["id"]
+            for finding in self.findings
+        ]
+
+        self.assertEqual(
+            len(finding_ids),
+            len(set(finding_ids))
+        )
+
+    def test_all_risk_scores_and_levels(self):
+        for finding in self.findings:
+            with self.subTest(finding=finding["id"]):
+                score, level = calculate_risk(
+                    finding["likelihood"],
+                    finding["impact"]
                 )
 
                 self.assertEqual(
-                    actual_score,
                     score,
-                    f"Incorrect risk score for {finding_id}: {name}"
+                    finding["expected_score"]
                 )
 
                 self.assertEqual(
-                    actual_level,
                     level,
-                    f"Incorrect risk level for {finding_id}: {name}"
+                    finding["expected_level"]
                 )
 
     def test_risk_category_distribution(self):
-        categories = {
+        distribution = {
             "Low": 0,
             "Medium": 0,
             "High": 0,
-            "Critical": 0,
+            "Critical": 0
         }
 
-        for finding in SIMULATED_FINDINGS:
-            likelihood = finding[2]
-            impact = finding[3]
+        for finding in self.findings:
+            _, level = calculate_risk(
+                finding["likelihood"],
+                finding["impact"]
+            )
 
-            _, level = calculate_risk(likelihood, impact)
-            categories[level] += 1
+            distribution[level] += 1
 
-        self.assertEqual(categories["Low"], 0)
-        self.assertEqual(categories["Medium"], 1)
-        self.assertEqual(categories["High"], 3)
-        self.assertEqual(categories["Critical"], 1)
+        self.assertEqual(
+            distribution,
+            {
+                "Low": 0,
+                "Medium": 1,
+                "High": 3,
+                "Critical": 1
+            }
+        )
 
     def test_highest_priority_finding(self):
         highest = max(
-            SIMULATED_FINDINGS,
+            self.findings,
             key=lambda finding: calculate_risk(
-                finding[2],
-                finding[3]
+                finding["likelihood"],
+                finding["impact"]
             )[0]
         )
 
-        self.assertEqual(highest[0], "F-05")
-        self.assertEqual(highest[4], 20)
+        self.assertEqual(highest["id"], "F-05")
+        self.assertEqual(highest["expected_score"], 20)
+
+    def test_required_assessment_fields(self):
+        required_fields = [
+            "id",
+            "title",
+            "likelihood",
+            "impact",
+            "expected_score",
+            "expected_level",
+            "recommendation"
+        ]
+
+        for finding in self.findings:
+            with self.subTest(finding=finding.get("id")):
+                for field in required_fields:
+                    self.assertIn(field, finding)
+
+    def test_assessment_is_identified_as_simulated(self):
+        self.assertIn(
+            "Simulated",
+            self.assessment["assessment_type"]
+        )
+
+        self.assertIn(
+            "Hypothetical",
+            self.assessment["disclaimer"]
+        )
 
 
 if __name__ == "__main__":
