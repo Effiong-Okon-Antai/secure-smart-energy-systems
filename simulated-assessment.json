@@ -1,0 +1,67 @@
+
+{
+  "framework": "SECAF",
+  "version": "1.1",
+  "assessment_type": "Simulated Smart Inverter Cybersecurity Assessment",
+  "assessment_date": "2026-10-22",
+  "environment": "Fictional connected smart energy system",
+  "disclaimer": "Hypothetical scenarios only. No real equipment or customer systems were tested.",
+  "risk_scoring": {
+    "method": "likelihood * impact",
+    "minimum": 1,
+    "maximum": 5,
+    "categories": {
+      "Low": [1, 4],
+      "Medium": [5, 9],
+      "High": [10, 16],
+      "Critical": [17, 25]
+    }
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "title": "Weak Monitoring Account Authentication",
+      "likelihood": 4,
+      "impact": 4,
+      "expected_score": 16,
+      "expected_level": "High",
+      "recommendation": "Use strong passwords and enable multifactor authentication where supported."
+    },
+    {
+      "id": "F-02",
+      "title": "Insecure Wi-Fi Configuration",
+      "likelihood": 3,
+      "impact": 4,
+      "expected_score": 12,
+      "expected_level": "High",
+      "recommendation": "Use secure Wi-Fi authentication and update network security settings."
+    },
+    {
+      "id": "F-03",
+      "title": "Outdated Monitoring Device Firmware",
+      "likelihood": 3,
+      "impact": 5,
+      "expected_score": 15,
+      "expected_level": "High",
+      "recommendation": "Apply vendor-supported firmware updates and restrict unnecessary access."
+    },
+    {
+      "id": "F-04",
+      "title": "Excessive Monitoring Account Permissions",
+      "likelihood": 3,
+      "impact": 3,
+      "expected_score": 9,
+      "expected_level": "Medium",
+      "recommendation": "Apply least-privilege access and review user permissions."
+    },
+    {
+      "id": "F-05",
+      "title": "Inadequate Network Segmentation",
+      "likelihood": 4,
+      "impact": 5,
+      "expected_score": 20,
+      "expected_level": "Critical",
+      "recommendation": "Segment energy monitoring devices and restrict unnecessary network communication."
+    }
+  ]
+}
