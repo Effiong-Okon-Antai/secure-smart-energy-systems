@@ -269,19 +269,68 @@ python SECAF/risk-calculator.py
 
 ## Framework Status and Limitations
 
-SECAF v1.0 is an independently developed, open-source cybersecurity assessment framework focused on connected smart energy systems.
+**Framework:** Smart Energy Cybersecurity Assessment Framework (SECAF)  
+**Version:** 1.1  
+**Development Status:** Working Technical Prototype  
+**Developer:** Effiong Okon Antai  
+**Last Updated:** October 2026
 
-It is currently an early version of the framework and will continue to develop as more research, practical feedback and technical review are added.
+### Current Development Status
 
-SECAF should not be presented as an industry standard or as a replacement for established cybersecurity standards and manufacturer security guidance.
+SECAF v1.1 is an independently developed, open-source cybersecurity assessment framework focused on connected smart-energy systems.
 
-The framework also has some limitations:
+The current prototype includes:
 
-- It does not guarantee that a system is free from cybersecurity vulnerabilities.
-- The security features available will vary between manufacturers, devices and cloud platforms.
-- Some checks may not apply to every energy system.
-- Risk scores depend on the actual system, environment and evidence available during an assessment.
-- SECAF v1.0 has not yet been independently validated as an industry cybersecurity standard.
-- The framework is intended for defensive and authorised security assessment only.
+- Structured cybersecurity assessment methodology
+- Security assessment checklist and control references
+- Python-based risk calculation and classification
+- Input validation
+- JSON-based assessment data
+- Automated Markdown assessment report generation
+- Detailed simulated security scenarios
+- Risk-based remediation prioritisation
+- Automated Python testing
+- GitHub Actions integration for testing and report generation
 
-Future versions of SECAF may be improved through technical review, practical testing, community feedback and contributions from cybersecurity and energy professionals.
+The framework has successfully demonstrated automated assessment processing and report generation using five hypothetical smart-inverter security findings.
+
+### Framework Limitations
+
+SECAF v1.1 has several important limitations:
+
+1. The current demonstration uses simulated cybersecurity findings.
+2. No commercial inverter or battery system has been independently security-tested through this project.
+3. The framework has not undergone independent cybersecurity certification.
+4. Risk scores are based on illustrative likelihood and impact assumptions.
+5. Security capabilities differ between manufacturers and connected devices.
+6. The framework does not guarantee that assessed systems are free from vulnerabilities.
+7. Automated tests validate selected software functions, not the effectiveness of the framework against real-world cyberattacks.
+8. The framework is not a replacement for established cybersecurity standards or manufacturer security guidance.
+
+### Future Development
+
+Potential improvements include:
+
+- Further testing using authorised laboratory environments
+- Integration with recognised cybersecurity control frameworks
+- Additional automated validation
+- More flexible assessment data structures
+- Enhanced report generation
+- Technical review and feedback from cybersecurity professionals
+- Evaluation using real-world assessment evidence, where authorised
+
+### Responsible Use
+
+SECAF is intended for defensive cybersecurity education, research and authorised security assessments.
+
+Users should obtain appropriate permission before assessing any operational system.
+
+The framework should not be used to access, modify or interfere with systems without authorisation.
+
+### Conclusion
+
+SECAF v1.1 demonstrates the integration of cybersecurity assessment methodology, Python-based risk scoring, structured assessment data and automated reporting.
+
+It provides a technical foundation for further research and development in connected smart-energy cybersecurity.
+
+The project remains a working prototype and should not be presented as an independently validated commercial cybersecurity product.
