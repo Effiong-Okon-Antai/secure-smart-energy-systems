@@ -307,15 +307,74 @@ def generate_report():
         results,
         key=lambda item: item["calculated_score"]
     )
+    # Generate a prioritised cybersecurity remediation plan.
+    # Higher risk scores receive higher remediation priority.
+    prioritised_findings = sorted(
+        results,
+        key=lambda item: item["calculated_score"],
+        reverse=True
+    )
 
     lines.extend([
-        "## 5. Highest-Priority Finding",
+        "## 5. Prioritised Cybersecurity Remediation Plan",
+        "",
+        "This remediation plan ranks the simulated cybersecurity "
+        "findings according to their calculated risk scores.",
+        "",
+        "Higher-risk findings should generally receive earlier "
+        "attention, subject to operational requirements and "
+        "the availability of appropriate security controls.",
+        "",
+        "| Priority | Finding | Risk Score | Risk Level | Recommended Action |",
+        "|---|---|---|---|---|"
+    ])
+
+    for priority, finding in enumerate(prioritised_findings, start=1):
+        recommendation = finding["recommendation"].replace("|", "\\|")
+        title = finding["title"].replace("|", "\\|")
+
+        lines.append(
+            f"| {priority} | "
+            f"{finding['id']} - {title} | "
+            f"{finding['calculated_score']} | "
+            f"{finding['calculated_level']} | "
+            f"{recommendation} |"
+        )
+
+    lines.extend([
+        "",
+        "### Remediation Guidance",
+        "",
+        "**Critical Risks:** Prioritise investigation and mitigation "
+        "as soon as practicable.",
+        "",
+        "**High Risks:** Develop and implement appropriate "
+        "corrective actions promptly.",
+        "",
+        "**Medium Risks:** Schedule remediation according to "
+        "the organisation's risk management priorities.",
+        "",
+        "**Low Risks:** Monitor and address through routine "
+        "security improvement activities.",
+        "",
+        "### Remediation Verification",
+        "",
+        "Following implementation, each corrective action should "
+        "be reviewed to determine whether the intended "
+        "security improvement has been achieved.",
+        "",
+        "Residual risks should be documented and reassessed "
+        "using the SECAF risk-scoring methodology.",
+        ""
+    ])
+    lines.extend([
+        "## 6. Highest-Priority Finding",
         "",
         f"**Finding:** {highest['id']} — {highest['title']}",
         f"**Risk Score:** {highest['calculated_score']}",
         f"**Risk Level:** {highest['calculated_level']}",
         "",
-        "## 6. Assessment Limitations",
+        "## 7. Assessment Limitations",
         "",
         "This report is based entirely on fictional scenarios.",
         "It does not represent a penetration test, live "
