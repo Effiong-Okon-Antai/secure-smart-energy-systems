@@ -283,6 +283,44 @@ From the repository root, run:
 python SECAF/risk-calculator.py
 ```
 
+### Running the Assessment Report Generator
+
+SECAF includes a Python-based tool for generating
+cybersecurity assessment reports from structured JSON data.
+
+From the repository root, run:
+
+    python SECAF/generate-assessment-report.py
+
+The generator uses simulated assessment data stored
+in the SECAF directory.
+
+### Automated Testing and Verification
+
+The project uses GitHub Actions to:
+
+- Execute automated Python tests.
+- Generate a simulated cybersecurity assessment report.
+- Verify that expected report sections are present.
+- Upload the generated report as a workflow artifact.
+
+These automated checks help verify that the implemented
+software functions operate as expected.
+
+They do not constitute independent cybersecurity certification,
+penetration testing or verification of real smart-energy equipment.
+
+### Simulated Assessment
+
+The repository includes five hypothetical smart-inverter
+cybersecurity findings.
+
+These demonstrate SECAF's risk-scoring, assessment reporting
+and remediation-prioritisation capabilities.
+
+The findings are illustrative and do not represent confirmed
+vulnerabilities in real devices.
+
 ## Framework Status and Limitations
 
 **Framework:** Smart Energy Cybersecurity Assessment Framework (SECAF)  
