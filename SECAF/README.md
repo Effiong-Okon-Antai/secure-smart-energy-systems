@@ -1,4 +1,4 @@
-# Smart Energy Cybersecurity Assessment Framework (SECAF) v1.0
+# Smart Energy Cybersecurity Assessment Framework (SECAF) v1.1
 
 ## Overview
 
