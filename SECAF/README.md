@@ -37,20 +37,117 @@ SECAF v1.0 currently includes:
 
 ## Purpose and Objectives
 
-I created SECAF to provide a practical way of looking at cybersecurity risks in connected energy systems.
+## Framework Components
 
-The main objectives are to:
+SECAF is an independently developed cybersecurity assessment
+framework for connected smart-energy systems.
 
-- Identify the digital components connected to an energy system.
-- Check how users and administrators access the system.
-- Review the security of the network connecting the devices.
-- Identify risks linked to remote access, mobile apps and cloud platforms.
-- Check firmware and system update practices.
-- Review how system and user data are protected.
-- Record identified security risks in a clear and consistent way.
-- Recommend practical steps that can help reduce those risks.
+The framework combines structured security assessment methods,
+risk scoring, automated report generation and software testing.
 
-SECAF is not intended to replace existing cybersecurity standards. It provides a focused approach for looking at cybersecurity from the perspective of connected solar, inverter and battery systems.
+### 1. Cybersecurity Assessment Methodology
+
+Defines a structured process for identifying, assessing,
+documenting and prioritising potential cybersecurity risks
+in connected solar, inverter and battery systems.
+
+### 2. Cybersecurity Assessment Checklist
+
+Provides security checks covering:
+
+- Authentication and access control
+- Wi-Fi and network security
+- Remote monitoring and configuration
+- Cloud and mobile application connectivity
+- Firmware and software updates
+- Data protection
+- Security monitoring
+
+### 3. Security Control Reference
+
+Provides reference identifiers for assessment controls,
+allowing security findings to be linked to specific
+assessment requirements.
+
+### 4. Python Risk Calculator
+
+Implements a likelihood-and-impact risk-scoring model.
+
+Risk Score = Likelihood × Impact
+
+The calculator supports:
+
+- Input validation
+- Risk classification
+- Finding identification
+- Markdown finding report generation
+
+### 5. Automated Assessment Report Generator
+
+A Python-based reporting component processes structured
+JSON assessment data and produces a Markdown cybersecurity
+assessment report.
+
+The generated report includes:
+
+- Assessment overview
+- Security findings
+- Calculated risk scores
+- Risk classifications
+- Security scenarios
+- Recommended security controls
+- Highest-priority finding
+- Prioritised remediation recommendations
+- Assessment limitations
+
+### 6. Simulated Smart-Inverter Assessment
+
+The repository includes a fictional smart-inverter
+cybersecurity assessment containing five illustrative
+security findings.
+
+The simulated assessment demonstrates how SECAF can be
+used to identify, classify and prioritise potential
+cybersecurity risks.
+
+The scenarios are hypothetical and do not represent
+confirmed vulnerabilities in real equipment.
+
+### 7. Automated Testing
+
+SECAF includes Python tests covering risk calculations,
+input validation and report-generation behaviour.
+
+Testing documentation records the implemented checks
+and available validation results.
+
+### 8. GitHub Actions Integration
+
+The project uses GitHub Actions to automate:
+
+- Python test execution
+- Cybersecurity assessment report generation
+- Generated report verification
+- Uploading assessment reports as workflow artifacts
+
+This provides a repeatable software validation and
+report-generation process.
+
+### 9. Framework Documentation
+
+Supporting documentation includes:
+
+- Assessment Methodology
+- Assessment Checklist
+- Control Reference
+- Risk Scoring
+- Assessment Template
+- Example Assessment
+- Testing Documentation
+
+These components provide the foundation for further
+technical development, practical evaluation and
+community contributions.
 
 ## Scope — What SECAF Can Assess
 
