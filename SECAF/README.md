@@ -24,6 +24,35 @@ SECAF is intended for defensive, educational and authorised security assessment 
 
 ## Purpose and Objectives
 
+I developed SECAF to provide a practical and structured approach
+to identifying cybersecurity risks in connected smart-energy systems.
+
+The framework focuses on the digital technologies used in solar,
+inverter and battery installations, particularly systems connected
+to Wi-Fi networks, mobile applications and cloud platforms.
+
+### Objectives
+
+The main objectives of SECAF are to:
+
+1. Identify digital components connected to smart-energy systems.
+2. Assess authentication and access-control practices.
+3. Review Wi-Fi and network security configurations.
+4. Identify risks associated with remote monitoring and configuration.
+5. Examine mobile application and cloud connectivity risks.
+6. Review firmware and software update practices.
+7. Assess data protection and security monitoring controls.
+8. Calculate and classify identified cybersecurity risks.
+9. Generate structured cybersecurity assessment reports.
+10. Prioritise recommended security improvements.
+
+SECAF combines cybersecurity assessment methodology with
+Python-based risk scoring and automated reporting to support
+consistent documentation of potential security risks.
+
+The framework is intended for defensive, educational and
+authorised cybersecurity assessments.
+
 ## Framework Components
 
 SECAF is an independently developed cybersecurity assessment
