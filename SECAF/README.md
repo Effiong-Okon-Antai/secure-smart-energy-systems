@@ -234,32 +234,34 @@ A completed assessment should provide a clear record of what was reviewed, what 
 
 See the [SECAF Example Assessment](example-assessment.md) for a fictional example showing how the checklist, risk scoring and assessment template work together.
 
-## SECAF Risk Calculator
+## SECAF Risk Calculator and Automated Reporting
 
-SECAF v1.0 includes a simple Python risk calculator that applies the framework's risk-scoring method.
+SECAF includes Python-based tools for calculating
+cybersecurity risk scores and generating assessment reports.
 
-The calculator allows an assessor to enter:
+### Risk Calculation
 
-- Finding ID
-- Checklist reference
-- Finding description
-- Recommended action
-- Likelihood (1–5)
-- Impact (1–5)
+The framework uses a five-point likelihood and impact scale.
 
-It then calculates:
+Risk Score = Likelihood × Impact
 
-**Risk Score = Likelihood × Impact**
+Risk classifications are:
 
-and classifies the finding as **Low, Medium, High or Critical**.
+| Risk Score | Classification |
+|------------|----------------|
+| 1–4 | Low |
+| 5–9 | Medium |
+| 10–16 | High |
+| 17–25 | Critical |
 
-The calculator can also generate a Markdown assessment report for the finding.
+The risk calculator validates assessment inputs and
+generates individual Markdown finding reports.
 
-### Running the Calculator
+### Running the Risk Calculator
 
 Python 3 is required.
 
-From the root of this repository, run:
+From the repository root, run:
 
 ```bash
 python SECAF/risk-calculator.py
