@@ -49,8 +49,9 @@ jobs:
               "## 2. Risk Assessment Results",
               "## 3. Risk Distribution",
               "## 4. Detailed Findings",
-              "## 5. Highest-Priority Finding",
-              "## 6. Assessment Limitations",
+              "## 5. Prioritised Cybersecurity Remediation Plan",
+              "## 6. Highest-Priority Finding",
+              "## 7. Assessment Limitations",
           ]
 
           for section in required_sections:
