@@ -177,7 +177,7 @@ def generate_report():
         ""
     ])
 
-        for result in results:
+    for result in results:
 
         security_scenarios = {
             "F-01": {
