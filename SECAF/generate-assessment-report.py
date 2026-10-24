@@ -62,12 +62,56 @@ def generate_report():
         "",
         f"**Disclaimer:** {assessment['disclaimer']}",
         "",
-        "## 1. Executive Summary",
+            "## 1. Executive Summary",
         "",
-        f"This report evaluates {len(findings)} hypothetical "
-        "cybersecurity findings using the SECAF risk model.",
+        "### Assessment Background",
         "",
-        "Risk Score = Likelihood × Impact",
+        "This cybersecurity assessment demonstrates the application "
+        "of the Smart Energy Cybersecurity Assessment Framework "
+        "(SECAF) to a simulated hybrid solar energy environment.",
+        "",
+        "The fictional environment includes a hybrid inverter, "
+        "lithium battery storage, a Wi-Fi monitoring dongle, "
+        "a wireless router, a cloud monitoring platform, "
+        "and a mobile application.",
+        "",
+        "### Assessment Objectives",
+        "",
+        "The objectives of this assessment are to:",
+        "",
+        "- Identify hypothetical cybersecurity weaknesses "
+        "affecting connected smart energy systems.",
+        "- Evaluate potential security risks using structured "
+        "likelihood and impact ratings.",
+        "- Calculate and classify cybersecurity risks "
+        "using the SECAF risk-scoring methodology.",
+        "- Recommend appropriate security controls "
+        "and risk mitigation measures.",
+        "- Demonstrate automated cybersecurity assessment "
+        "report generation.",
+        "",
+        "### Assessment Scope",
+        "",
+        f"The assessment covers {len(findings)} hypothetical "
+        "security findings involving authentication, "
+        "wireless network security, firmware management, "
+        "access permissions, and network segmentation.",
+        "",
+        "### Risk Assessment Method",
+        "",
+        "Each finding is assigned a likelihood score "
+        "and an impact score ranging from 1 to 5.",
+        "",
+        "**Risk Score = Likelihood × Impact**",
+        "",
+        "The resulting score is classified as Low, Medium, "
+        "High, or Critical according to SECAF thresholds.",
+        "",
+        "### Important Limitation",
+        "",
+        "This is a simulated assessment. No real inverter, "
+        "customer system, or manufacturer infrastructure "
+        "was tested. All findings and ratings are illustrative.",
         "",
         "## 2. Risk Assessment Results",
         "",
