@@ -177,16 +177,127 @@ def generate_report():
         ""
     ])
 
-    for result in results:
+        for result in results:
+
+        security_scenarios = {
+            "F-01": {
+                "scenario": (
+                    "The fictional smart inverter monitoring account "
+                    "uses weak authentication controls."
+                ),
+                "impact": (
+                    "Unauthorised access could expose monitoring "
+                    "information or available account functions."
+                ),
+                "controls": [
+                    "Use strong, unique passwords.",
+                    "Enable multifactor authentication where supported.",
+                    "Review account access and permissions.",
+                    "Monitor suspicious login activity."
+                ]
+            },
+            "F-02": {
+                "scenario": (
+                    "The fictional Wi-Fi monitoring device connects "
+                    "through a wireless network with weak security settings."
+                ),
+                "impact": (
+                    "An attacker within wireless range could attempt "
+                    "unauthorised access to the local network."
+                ),
+                "controls": [
+                    "Use WPA2-AES or WPA3 where supported.",
+                    "Change default router credentials.",
+                    "Disable insecure wireless authentication methods.",
+                    "Keep router firmware updated."
+                ]
+            },
+            "F-03": {
+                "scenario": (
+                    "The fictional inverter monitoring dongle "
+                    "operates with outdated firmware."
+                ),
+                "impact": (
+                    "Unpatched vulnerabilities could increase exposure "
+                    "to unauthorised access or service disruption."
+                ),
+                "controls": [
+                    "Check for vendor-supported firmware updates.",
+                    "Verify firmware authenticity.",
+                    "Restrict unnecessary network access.",
+                    "Maintain a firmware inventory."
+                ]
+            },
+            "F-04": {
+                "scenario": (
+                    "Multiple fictional monitoring users share "
+                    "an account with excessive permissions."
+                ),
+                "impact": (
+                    "Account misuse or compromise could expose "
+                    "monitoring information or configuration functions."
+                ),
+                "controls": [
+                    "Apply least-privilege access.",
+                    "Use separate accounts where supported.",
+                    "Review user permissions regularly.",
+                    "Remove unnecessary access."
+                ]
+            },
+            "F-05": {
+                "scenario": (
+                    "The fictional smart inverter monitoring device "
+                    "shares a network with household computers "
+                    "and other connected devices."
+                ),
+                "impact": (
+                    "A compromised device could increase the exposure "
+                    "of other systems connected to the same network."
+                ),
+                "controls": [
+                    "Use a dedicated network segment where practical.",
+                    "Restrict communication between network segments.",
+                    "Allow only required network connections.",
+                    "Monitor unusual network activity."
+                ]
+            }
+        }
+
+        details = security_scenarios.get(result["id"])
+
         lines.extend([
             f"### {result['id']} — {result['title']}",
+            "",
+            "#### Risk Assessment",
             "",
             f"**Likelihood:** {result['likelihood']}/5",
             f"**Impact:** {result['impact']}/5",
             f"**Risk Score:** {result['calculated_score']}",
             f"**Risk Level:** {result['calculated_level']}",
-            "",
-            "**Recommended Action:**",
+            ""
+        ])
+
+        if details:
+            lines.extend([
+                "#### Simulated Security Scenario",
+                "",
+                details["scenario"],
+                "",
+                "#### Potential Security Impact",
+                "",
+                details["impact"],
+                "",
+                "#### Recommended Security Controls",
+                ""
+            ])
+
+            for control in details["controls"]:
+                lines.append(f"- {control}")
+
+            lines.append("")
+
+        lines.extend([
+            "#### Primary Recommended Action",
             "",
             result["recommendation"],
             ""
