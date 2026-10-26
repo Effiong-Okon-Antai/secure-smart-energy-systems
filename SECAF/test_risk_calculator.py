@@ -82,6 +82,33 @@ class TestSECAFRiskCalculator(unittest.TestCase):
 
                 self.assertEqual(level, expected_level)
 
+    def test_likelihood_rating_definitions(self):
+        expected = {
+            1: "Rare",
+            2: "Unlikely",
+            3: "Possible",
+            4: "Likely",
+            5: "Almost Certain",
+        }
 
+        self.assertEqual(
+            calculator.LIKELIHOOD_RATINGS,
+            expected
+        )
+
+    def test_impact_rating_definitions(self):
+        expected = {
+            1: "Negligible",
+            2: "Minor",
+            3: "Moderate",
+            4: "Major",
+            5: "Critical",
+        }
+
+        self.assertEqual(
+            calculator.IMPACT_RATINGS,
+            expected
+        )
+        
 if __name__ == "__main__":
     unittest.main()
