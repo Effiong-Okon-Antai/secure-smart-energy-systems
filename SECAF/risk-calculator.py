@@ -4,6 +4,23 @@
 
 from pathlib import Path
 import re
+# SECAF v1.2 Risk Assessment Rating Definitions
+
+LIKELIHOOD_RATINGS = {
+    1: "Rare",
+    2: "Unlikely",
+    3: "Possible",
+    4: "Likely",
+    5: "Almost Certain",
+}
+
+IMPACT_RATINGS = {
+    1: "Negligible",
+    2: "Minor",
+    3: "Moderate",
+    4: "Major",
+    5: "Critical",
+}
 
 
 def calculate_risk(likelihood, impact):
