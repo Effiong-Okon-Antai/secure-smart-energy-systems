@@ -83,8 +83,8 @@ def main():
     print(f"Finding ID: {finding_id}")
     print(f"Checklist Reference: {checklist_id}")
     print(f"Finding: {finding}")
-    print(f"Likelihood: {likelihood}")
-    print(f"Impact: {impact}")
+    print(f"Likelihood: {likelihood} ({LIKELIHOOD_RATINGS[likelihood]})")
+    print(f"Impact: {impact} ({IMPACT_RATINGS[impact]})")
     print(f"Risk Score: {score}")
     print(f"Risk Level: {level}")
     print(f"Recommended Action: {recommendation}")
@@ -103,9 +103,9 @@ def main():
 
 ## Risk Assessment
 
-**Likelihood:** {likelihood}/5
+**Likelihood:** {likelihood}/5 ({LIKELIHOOD_RATINGS[likelihood]})
 
-**Impact:** {impact}/5
+**Impact:** {impact}/5 ({IMPACT_RATINGS[impact]})
 
 **Risk Score:** {score}
 
