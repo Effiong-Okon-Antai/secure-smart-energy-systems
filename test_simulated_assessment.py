@@ -16,9 +16,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-CALCULATOR_PATH = BASE_DIR / "risk-calculator.py"
-ASSESSMENT_PATH = BASE_DIR / "simulated-assessment.json"
-
+CALCULATOR_PATH = BASE_DIR / "SECAF" / "risk-calculator.py"
+ASSESSMENT_PATH = BASE_DIR / "SECAF" / "simulated-assessment.json"
 
 # Import the existing SECAF risk calculator.
 spec = importlib.util.spec_from_file_location(
