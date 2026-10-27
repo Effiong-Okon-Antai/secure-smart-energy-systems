@@ -278,6 +278,16 @@ This functionality demonstrates how structured cybersecurity assessment data can
 ## 9. Automated Testing and Continuous Integration
 
 SECAF includes automated Python tests executed through GitHub Actions.
+The current automated test suite contains 22 tests,
+all successfully executed through GitHub Actions:
+
+- 14 tests covering risk calculations, classifications,
+  input validation, and report generation.
+- 8 tests covering simulated assessment findings,
+  risk scores, descriptive ratings, required fields,
+  and risk prioritisation.
+
+Latest verified result: 22 tests passed.
 
 The automated testing process covers selected aspects of:
 
