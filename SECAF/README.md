@@ -131,12 +131,25 @@ confirmed vulnerabilities in real equipment.
 
 ### 7. Automated Testing
 
-SECAF includes Python tests covering risk calculations,
-input validation and report-generation behaviour.
+SECAF uses Python's unittest framework to validate risk
+calculations, input handling, simulated assessments,
+and automated report generation.
 
-Testing documentation records the implemented checks
-and available validation results.
+The automated test suite currently contains 22 tests:
 
+- 14 tests covering risk calculations, classifications,
+  likelihood and impact ratings, input validation,
+  and report generation.
+- 8 tests covering simulated assessment findings,
+  risk scores, descriptive ratings, required fields,
+  and risk prioritisation.
+
+All 22 automated tests passed successfully in GitHub Actions.
+
+Testing is performed using fictional security scenarios.
+Passing these tests confirms the expected behaviour of
+the tested software functions. It does not constitute
+real-world penetration testing or independent security validation.
 ### 8. GitHub Actions Integration
 
 The project uses GitHub Actions to automate:
