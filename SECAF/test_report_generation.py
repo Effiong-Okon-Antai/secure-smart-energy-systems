@@ -54,6 +54,8 @@ class TestSECAFReportGeneration(unittest.TestCase):
             self.assertIn("Risk Score:** 20", report)
             self.assertIn("Risk Level:** Critical", report)
             self.assertIn("Enable strong authentication", report)
+            self.assertIn("**Likelihood:** 4/5 (Likely)", report)
+            self.assertIn("**Impact:** 5/5 (Critical)", report)
 
     def test_invalid_risk_does_not_create_report(self):
         with tempfile.TemporaryDirectory() as temp_dir:
