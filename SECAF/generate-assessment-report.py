@@ -12,6 +12,15 @@ import importlib.util
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from importlib.util import module_from_spec, spec_from_file_location
+
+calculator_path = Path(__file__).resolve().parent / "risk-calculator.py"
+spec = spec_from_file_location("secaf_risk_calculator", calculator_path)
+calculator = module_from_spec(spec)
+spec.loader.exec_module(calculator)
+
+LIKELIHOOD_RATINGS = calculator.LIKELIHOOD_RATINGS
+IMPACT_RATINGS = calculator.IMPACT_RATINGS
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -159,8 +168,8 @@ def generate_report():
 
         lines.append(
             f"| {finding_id} | {title} | "
-            f"{finding['likelihood']} | "
-            f"{finding['impact']} | "
+            f"{finding['likelihood']} ({LIKELIHOOD_RATINGS[finding['likelihood']]}) | "
+            f"{finding['impact']} ({IMPACT_RATINGS[finding['impact']]}) | "
             f"{score} | {level} |"
         )
 
