@@ -11,6 +11,10 @@ All scenarios are hypothetical.
 import importlib.util
 import json
 import unittest
+import subprocess
+import sys
+import tempfile
+import shutil
 from pathlib import Path
 
 
@@ -140,6 +144,47 @@ class TestSimulatedAssessment(unittest.TestCase):
             self.assessment["disclaimer"]
         )
 
+    def test_generated_report_contains_descriptive_ratings(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
 
+            source_dir = BASE_DIR / "SECAF"
+
+            for filename in [
+                "risk-calculator.py",
+                "generate-assessment-report.py",
+                "simulated-assessment.json",
+            ]:
+                shutil.copy2(
+                    source_dir / filename,
+                    temp_path / filename
+                )
+
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(temp_path / "generate-assessment-report.py"),
+                ],
+                cwd=temp_path,
+                capture_output=True,
+                text=True,
+                timeout=15,
+                check=False,
+            )
+
+            self.assertEqual(
+                result.returncode,
+                0,
+                msg=result.stderr
+            )
+
+            report_path = temp_path / "generated-assessment-report.md"
+
+            self.assertTrue(report_path.is_file())
+
+            report = report_path.read_text(encoding="utf-8")
+
+            self.assertIn("4 (Likely)", report)
+            self.assertIn("5 (Critical)", report)
 if __name__ == "__main__":
     unittest.main()
